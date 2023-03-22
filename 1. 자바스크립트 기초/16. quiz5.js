@@ -11,7 +11,7 @@ var max;
 var min;
 
 if (level === 1) {
-    while (true) {
+    while (true) { 
 
         while (true) {
             left = Math.floor(Math.random() * 100) + 1;
