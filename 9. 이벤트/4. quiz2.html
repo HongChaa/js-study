@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fontawesome css: https://fontawesome.com -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+
+       
+        .hider {
+            display: none;
+        }
+        #lunches {
+            display: inline;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="lunches" class="menu">
+        <i class='fas fa-caret-right' style='font-size:20px' id="point"></i>
+        <span class="title">추천 메뉴(Click Me!)</span>
+        <ul class="hider">
+            <li>돈까스</li>
+            <li>군만두</li>
+            <li>볶음밥</li>
+            <li>마파두부</li>
+        </ul>
+    </div>
+
+    <script>
+        const $menu = document.querySelector('.menu');
+        const $ul =document.querySelector('ul');
+
+        $menu.onclick = () => {
+            $ul.classList.toggle('hider');
+            document.getElementById('point').style.transform = `rotate(90deg)`;
+            if($ul.classList.contains('hider')) {
+                document.getElementById('point').style.transform = `rotate(360deg)`;
+            }
+        }
+
+    </script>
+</body>
+</html>

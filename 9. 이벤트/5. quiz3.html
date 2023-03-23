@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown {
+            width: 80%;
+            margin: 0 auto;
+        }                      
+        button {
+            width: 140px;
+            height: 60px;
+
+            font-size: 25px;
+            color: antiquewhite;
+            background: rgb(167, 62, 62);
+        }
+
+        #drop-content {
+            width: 150px;
+            height: 200px;
+        }
+        #drop-content a{
+            background: lightgray;
+            border: 2px solid #000;
+            text-decoration: none;
+            color: #000;
+            font-size: 25px;
+            text-align: center;
+            margin: 50px 30px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="btn">Drop</button>
+        <div style="display: none;" id="drop-content">
+            <a href="#">Menu1</a>
+            <a href="#">Menu2</a>
+            <a href="#">Menu3</a>
+            <a href="#">Menu4</a>
+            <a href="#">Menu5</a>
+        </div>
+    </div>
+
+<script>
+
+    const $button = document.querySelector('button');
+
+    $button.onmouseover = () => {
+
+        document.getElementById('drop-content').style.display = 'block';
+    }
+
+    $button.onmouseout = () => {
+
+        document.getElementById('drop-content').style.display = 'none';
+    }
+
+</script>
+
+
+</body>
+</html>
